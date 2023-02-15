@@ -1,0 +1,14 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+}
+
+body {
+    background-image: url(../Multimedia/fondo\ 2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
