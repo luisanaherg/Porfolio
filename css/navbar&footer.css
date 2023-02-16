@@ -2,17 +2,8 @@ header {
 
     color: white;
     height: 10vh;
-    position: sticky;
-    top: 0px
-}
-
-nav h1{
-    text-align: center;
-    width: 20%;
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    position: static;
+    top: 0px;
 }
 
 body {
@@ -26,18 +17,15 @@ nav {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(64, 224, 208, 0.699);
+    background-color:  rgba(64, 224, 208, 0.699);
 }
 
 
 nav li {
-
-    list-style-type: none;
     color: white;
-    font-size: 100%;
+    font-size: 80%;
     margin-right: 1%;
-    border: 2px rgba(253, 253, 253, 0.699) solid;
-    width: 18%;
+    width: 30%;
     height: 35%;
     border-radius: 5px;
     display: flex;
@@ -54,10 +42,6 @@ nav li:hover {
     border-radius: 5px;
 }
 
-li {
-    list-style-type: none;
-}
-
 nav a {
     text-decoration: none;
     font-size: 90%;
@@ -70,8 +54,8 @@ nav ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 80%;
-    align-items: center;
+    width: 100%;
+    
 
 }
 
@@ -91,8 +75,7 @@ footer {
     font-size: xx-large;
     background-color: rgba(64, 224, 208, 0.699);
     position: static;
-    bottom: 0px;
-    left: 0px;
+    bottom:0;
 }
 
 footer i {
@@ -106,4 +89,157 @@ button {
     border: 2px rgba(255, 255, 255, 0.534) solid;
     color: white;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.445);
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.menu-items{
+    order: 2;
+    display: flex;
+}
+
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.navbar a{
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover{
+    color: #117964;
+}
+
+@media (max-width: 768px){
+    .navbar{
+        opacity: 0.95;
+    }
+
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines{
+        display: block;
+    }
+
+    .navbar-container{
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+
+    .navbar-container input[type="checkbox"]{
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .navbar-container .hamburger-lines{
+        display: block;
+        height: 28px;
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar-container .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333;
+    }
+    
+    .navbar-container .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line2{
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .navbar-container .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar .menu-items{
+        padding-top: 100px;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 40px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow:  5px 0px 10px 0px #aaa;
+        overflow: scroll;
+    }
+
+    .navbar .menu-items li{
+        margin-bottom: 1.8rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .logo{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 2.5rem;
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .box{
+        transform: translateX(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        transform: scaleY(0);
+    }
+
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+
+}
+
+@media (max-width: 500px){
+    .navbar-container input[type="checkbox"]:checked ~ .logo{
+        display: none;
+    }
 }

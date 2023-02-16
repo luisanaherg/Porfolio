@@ -8,17 +8,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="../css/General.css">
-        <link rel="stylesheet" href="../css/navbar&footer.css">
-        <link rel="stylesheet" href="../css/Contactame.css">
+    <link rel="stylesheet" href="../css/General.css">
+    <link rel="stylesheet" href="../css/navbar&footer.css">
+    <link rel="stylesheet" href="../css/Contactame.css">
     <title>Contactame</title>
 </head>
 
 <body>
     <header>
-        <nav>
-            <h1>LH</h1>
-            <ul>
+        <nav class="navbar">
+            <div class="navbar-container container">
+                <input type="checkbox" name="" id="">
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+        <ul class="menu-items">
                 <li><a href="./Sobre mi.html">Sobre mi</a></li>
                 <li><a href="./Formacion.html">Formacion</a></li>
                 <li><a href="./Proyectos.html">Proyectos</a></li>
@@ -28,18 +34,45 @@
         </nav>
     </header>
     <main>
-        
-        <ul>
-            <h2>Correo <i class="fa-solid fa-envelope"></i></h2>
-            <li>Luisanaherg@gmail.com </li>
-            <h2>Telefono<i class="fa-solid fa-phone"></i></h2>
-            <li> +54 011 6125 5414</li>
-            <h2>Pagina web</h2>
-            <li>www.Luisanahernandez.com.ar</li>
-        </ul>
-
-        <a href="../index.html"><button>Volver al Inicio</button></a>
-
+        <div class="contact" id="contact">
+            <div class="container">
+                <h3>Contactame</h3>
+                <p>Si tienes alguna pregunta no dudes en contactarme :)</p>
+                <div class="column">
+                    <div class="text-field-name-1">
+                        <form>
+                            <input type="text" class="text" value=" Inserta tu nombre" onfocus="this.value = '';"
+                                onblur="if (this.value == '') {this.value = ' Inserta tu nombre';}">
+                        </form>
+                    </div>
+                    <div class="text-field-email-1">
+                        <form>
+                            <input type="text" class="text" value="Inserta tu mail" onfocus="this.value = '';"
+                                onblur="if (this.value == '') {this.value = 'Inserta tu mail';}">
+                        </form>
+                    </div>
+                    <div class="text-field-subject-1">
+                        <form>
+                            <input type="text" class="text" value="Asunto" onfocus="this.value = '';"
+                                onblur="if (this.value == '') {this.value = ' Asunto';}">
+                        </form>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="text-field-area-">
+                        <form>
+                            <textarea value="Message:" onfocus="if(this.value == 'Message') this.value='';"
+                                onblur="if(this.value == '') this.value='Message';">Mensaje</textarea>
+                        </form>
+                    </div>
+                    <div class="button">
+                        <form>
+                            <input type="submit" value="send message">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <a href="https://www.linkedin.com/in/luisanahernandezgomez/" target="_blank"><i
