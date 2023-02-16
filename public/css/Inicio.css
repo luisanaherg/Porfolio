@@ -101,6 +101,20 @@ nav ul {
 }
 
 .box h1 {
-    color: rgb(61, 7, 187);
+    color: #292D46;
     text-shadow: 0 0 8px rgba(223, 214, 214, 0.8);
+}
+
+@media screen and (max-width:767px) {
+    .box {
+        font-size: 60%;
+    }
+
+    .box li {
+        font-size: 100%;
+    }
+
+    .box ul {
+        height: 100%;
+    }
 }
